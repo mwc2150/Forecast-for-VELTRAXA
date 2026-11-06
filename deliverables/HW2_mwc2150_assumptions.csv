@@ -1,0 +1,28 @@
+id,category,assumption,unit,low,base,high,source_type,source,rationale
+B1,Brand,Launch year (2L+ relapsed/refractory MCL),year,2027.0,2027.0,2027.0,Regulatory plan,PDUFA July 2027 (fictional),Launch mid-year: year-1 uptake should reflect ~6 months on market
+B2,Brand,Launch year in 2L,year,2027.0,2027.0,2027.0,Regulatory plan,Brief,2L+ label: 2L and 3L+ launch together
+B3,Brand,"Peak share, 3L+",% of starts,0.121,0.194,0.283,Analog,Analog files,Mean of the 3L+ analogs
+B4,Brand,"Peak share, 2L",% of starts,0.121,0.154,0.221,Analog,Analog files,"Order-of-entry fit, 4th entrant; high = 3rd entrant"
+C1,Brand,"Coverage, launch year",x,0.75,0.9,1.0,Judgment,-,Launch-year formulary friction
+C2,Brand,"Coverage, after launch year",x,0.95,1.0,1.0,Judgment,-,Analog shares already include access
+D1,Persistence,Months on therapy (booked in start year),28-day months,10.0,14.0,18.0,Judgment,Brief,Taken until progression; no duration data
+D2,Persistence,Compliance (doses taken),% of planned,0.85,0.9,0.94,Judgment,Oral therapy adherence,"Starter value kept; once-daily oral, so some doses are missed; range spans better or worse adherence"
+E0,Epidemiology,Incidence scaler,x,0.95,1.0,1.05,Judgment,-,+/-5% for registry error
+E1,Epidemiology,Case growth after 2030,%/yr,0.016,0.026,0.036,Data,mcl_epi_inputs.csv,2025-2030 trend; +/-1 pt
+E2,Funnel,Diagnosed and presenting,%,0.949,0.969,0.979,Data,mcl_treatment_funnel.csv,Age bands weighted by 2025 cases
+F1,Budget,Launch-year phasing: linear ramp over Jul-Dec 2027 (month m proportional to m),months,6.0,6.0,6.0,Simplification,Class model,Annual total unchanged; weights 1..6 / 21
+F2,Budget,Phasing after launch year: flat (1/12 per month),months,12.0,12.0,12.0,Simplification,Class model,"Annual total unchanged; overstates early 2028, understates late 2028"
+L1,LOE,Loss-of-exclusivity year,year,2040.0,2041.0,2042.0,Patent calendar,Fictional,"Starter value kept; +/-1 year for patent extension or litigation; after 2035, so no effect on the plan"
+L2,LOE,"Units retained, LOE year",%,0.5,0.62,0.75,Benchmark,Week 6 notebook,After 2035; kept for completeness
+L3,LOE,"Units retained, after LOE year",%,0.15,0.23,0.35,Benchmark,Grabowski et al. 2021,Small-molecule erosion
+P1,Price,List price (WAC) per 28-day month,$,16800.0,16800.0,16800.0,Pricing plan,Fictional,Held flat
+P2,Price,Gross-to-net (share of WAC kept),%,0.7,0.75,0.79,Judgment,Part D + commercial mix,Starter value kept; net price after Part D and commercial rebates; range spans payer-mix uncertainty
+T1,Funnel,Treated in 1L,%,0.847,0.887,0.917,Data,mcl_treatment_funnel.csv,Age bands weighted by 2025 cases
+T2,Funnel,Progress 1L to 2L,%,0.485,0.545,0.605,Data,mcl_treatment_funnel.csv,Age bands weighted by 2025 cases
+T3,Funnel,Progress 2L to 3L,%,0.426,0.506,0.586,Data,mcl_treatment_funnel.csv,Age bands weighted by 2025 cases
+T4,Funnel,Later-lines multiplier,x,1.141,1.261,1.381,Data,mcl_treatment_funnel.csv,3L+ includes 4L and later
+T5,Funnel,Lag between lines,years,1.0,1.0,1.0,Judgment,Class model,Next line starts the following year
+U1,Uptake,"% of peak, 2027",% of peak,0.015,0.037,0.043,Analog,Analog files,July launch: 6 months; base = oral BTKi mean
+U2,Uptake,"% of peak, 2028",% of peak,0.255,0.589,0.663,Analog,Analog files,Base = oral BTKi mean
+U3,Uptake,"% of peak, 2029",% of peak,0.778,0.981,1.0,Analog,Analog files,Base = oral BTKi mean
+U4,Uptake,"% of peak, 2030+",% of peak,1.0,1.0,1.0,Analog,Analog files,All analogs at peak by month 31
