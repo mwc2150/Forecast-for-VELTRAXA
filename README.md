@@ -1,8 +1,10 @@
 # Forecast for VELTRAXA: Is $180M in 2029 Reachable?
 
-Brand forecast for **VELTRAXA**, a fictional once-daily oral BTK degrader launching in July 2027 for relapsed/refractory mantle cell lymphoma (2L+), built for *Applied Data Science and AI in Pharma Commercial* (Columbia University, Fall 2026). The goal is a monthly budget, a low/base/high long-range plan to 2035, and a clear answer to whether the plan of record ($180M net revenue in 2029) is reachable and what would have to be true. All data are synthetic.
+Brand forecast for **VELTRAXA**, a fictional once-daily oral BTK degrader launching in July 2027 for relapsed/refractory mantle cell lymphoma (2L+). The goal is a monthly budget, a low/base/high long-range plan to 2035, and a clear answer to whether the plan of record ($180M net revenue in 2029) is reachable and what would have to be true. All data are synthetic.
 
 **Author:** Michael Chen
+
+Built for *Applied Data Science and AI in Pharma Commercial* (Columbia University, Fall 2026)****
 
 ## What's here
 
